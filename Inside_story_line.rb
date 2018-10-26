@@ -3,7 +3,7 @@ require_relative 'Story'
 
 class Inside_storyline < Story
     def initialize(text, end_story, restart_game = false)
-        super(text, end_story)
+        super(text)
         @riddle = # hard code riddle
         @restart_game = restart_game
     end

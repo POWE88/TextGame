@@ -1,4 +1,6 @@
 require_relative 'Story'
+require_relative 'Outside_story_line'
+require_relative 'Inside_story_line'
 
 class TextGame
     attr_accessor :character, :friends, :response
@@ -13,8 +15,12 @@ class TextGame
         @response = gets.chomp
     end
 
-    def new_story_line(text, end_story)
-        Story.new(text, end_story)
+    def outside_story_line(text, end_story)
+        Outside_story_line.new(text)
+    end
+
+    def inside_story_line(text, end_story)
+        Inside_story_line.new(text, end_story)
     end
 
 

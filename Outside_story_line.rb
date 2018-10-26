@@ -1,12 +1,11 @@
 require_relative 'Story'
 
 class Outside_story_line < Story
-    def initialize(text, end_story)
-        super(text, end_story)
+    def initialize(text)
+        super(text, end_story = false)
 
         #Answers: 1 = "water" 2 = "the living room" 3 = 18
         @riddles= {1 => "I'm often running yet I have no legs. You need me but I don't need you. What am I?", 2 => "what room in your house do ghosts avoid?", 3 => "what number is twice the sum of its digits?"}
-
     end
 
     def run
@@ -87,7 +86,3 @@ class Outside_story_line < Story
 
     end
 end
-
-outside = Outside_story_line.new("SomeText", false, [])
-
-outside.ring
