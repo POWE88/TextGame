@@ -1,9 +1,9 @@
 require_relative 'Story'
 
 
-class Inside_storyline < Story
+class Inside_story_line < Story
     def initialize(text, end_story, restart_game = false)
-        super(text)
+        super(text, end_story = false)
         @riddle = # hard code riddle
         @restart_game = restart_game
     end
@@ -42,8 +42,9 @@ class Inside_storyline < Story
     end
 
     def go_library
-        p "You enter the library and find the book of infinite loops. You are now stuck in an infinite loop"
+        p "As you enter the library you look around and see that you are surrounded by large towering bookcases. In the low-lit room, you notice a particular gold cased book. You pull out the book and the title reads, “Learn about Ruby: Where Parentheses are Optional.”  You begin reading and you find yourself so entranced and excited about the subject matter. A bit too excited, as though you were under a spell. As you continue you get to the chapter on methods. Sure that you would find the method needed to unveil the hidden rubies, you continue on reading. You get to the line of text that appears to repeat twice at the end of the page.  Enthusiastic and hypnotized you continue on to the next page. To your demise, you find yourself stuck reading one line over and over…. It appears that you're stuck in an infinite loop "
         #TODO: delay
+		sleep(1.5)
         infinite_loop
     end
 
